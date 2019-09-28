@@ -22,9 +22,9 @@ public class URLReader {
 			//solicitudes.get(i).run();
 			solicitudes.get(i).start();			
 		}
-                for(int x = 0; x < solicitudes.size(); x++) {
-				solicitudes.get(x).join();
-                }
+        for(int x = 0; x < solicitudes.size(); x++) {
+        	solicitudes.get(x).join();
+        }
 		
 		double tiempoFinal = System.currentTimeMillis();
 		System.err.println("Recibiendo " + peticiones + " solicitudes, el servidor se tarda " + (tiempoFinal - tiempoInicial) + " milisegundos en responder.");
